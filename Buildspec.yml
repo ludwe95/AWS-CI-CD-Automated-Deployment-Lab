@@ -1,16 +1,17 @@
 version: 0.2
- 
+
 phases:
+
+  install:
+    commands:
+      - echo Installing
+
   build:
     commands:
-      - echo "Validating deployment files"
-      - test -f index.html
-      - test -f appspec.yml
-      - test -f scripts/install_app.sh
- 
+      - echo Build Started
+      - date
+
 artifacts:
+
   files:
-    - index.html
-    - appspec.yml
-    - scripts/install_app.sh
-  discard-paths: no 
+    - '**/*'
